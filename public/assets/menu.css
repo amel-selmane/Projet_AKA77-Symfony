@@ -1,10 +1,8 @@
 body,
 html {
-  /* background: linear-gradient(to right, #765d69, #8fb9a8); */
   font-family: Roboto Mono;
   height: 100%;
   margin: 0;
-  /* background: rgba(164, 176, 190, 1.0); */
   background-color: #ddd !important;
 }
 
@@ -148,6 +146,7 @@ a {
 
 a:hover {
   color: yellow !important;
+  text-decoration: none !important;
 }
 
 ul li:last-child {
@@ -164,7 +163,7 @@ ul li:last-child {
   border: 2px #ddd solid;
   padding: 1px;
   background: #ddd;
-  border-radius: 5%;
+  border-radius: 5px;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
 }
@@ -240,95 +239,6 @@ li:first-of-type {
   margin-top: 30px;
 }
 
-/* Animation du Logo */
-
-@-webkit-keyframes jackInTheBox {
-  from {
-    opacity: 0;
-    -webkit-transform: scale(0.1) rotate(30deg);
-    transform: scale(0.1) rotate(30deg);
-    -webkit-transform-origin: center bottom;
-    transform-origin: center bottom;
-  }
-
-  50% {
-    -webkit-transform: rotate(-10deg);
-    transform: rotate(-10deg);
-  }
-
-  70% {
-    -webkit-transform: rotate(3deg);
-    transform: rotate(3deg);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-@keyframes jackInTheBox {
-  from {
-    opacity: 0;
-    -webkit-transform: scale(0.1) rotate(30deg);
-    transform: scale(0.1) rotate(30deg);
-    -webkit-transform-origin: center bottom;
-    transform-origin: center bottom;
-  }
-
-  50% {
-    -webkit-transform: rotate(-10deg);
-    transform: rotate(-10deg);
-  }
-
-  70% {
-    -webkit-transform: rotate(3deg);
-    transform: rotate(3deg);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-.jackInTheBox {
-  -webkit-animation-name: jackInTheBox;
-  animation-name: jackInTheBox;
-  animation-duration: 1.5s;
-  margin-top: 30px;
-}
-
-@-webkit-keyframes jackInTheBox {
-  from {
-    opacity: 0;
-    -webkit-transform: scale(0.1) rotate(30deg);
-    transform: scale(0.1) rotate(30deg);
-    -webkit-transform-origin: center bottom;
-    transform-origin: center bottom;
-  }
-
-  50% {
-    -webkit-transform: rotate(-10deg);
-    transform: rotate(-10deg);
-  }
-
-  70% {
-    -webkit-transform: rotate(3deg);
-    transform: rotate(3deg);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-@keyframes jackInTheBox {
-  from {
     opacity: 0;
     -webkit-transform: scale(0.1) rotate(30deg);
     transform: scale(0.1) rotate(30deg);
@@ -412,4 +322,6 @@ li:first-of-type {
   margin-top: 20px;
 }
 
-
+form {
+	padding: 30px 20%;
+}
