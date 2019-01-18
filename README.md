@@ -1,2 +1,9 @@
-# Projet_AKA77-Symfony
-Projet AKA77 sur Framework Symfony
+# Projet_AKA77 - Symfony
+Projet de création de site web AKA77.
+
+Groupe :
+
+Marie
+Will
+Xavier
+Amel
