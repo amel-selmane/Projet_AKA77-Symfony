@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+{% block title %}Panneau d'Administration{% endblock %}
+{% block stylesheets %}{% endblock %}
+{% block body %}
+    <style>
+        canvas {
+            max-width: 550px;
+            max-height: 400px;
+            padding-left: 55px;
+        }
+    </style>
+    <h1>Hello World!!!!</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore repellat assumenda perferendis, consectetur adipisci fuga fugit enim placeat autem eum minus ipsam eligendi? Debitis veritatis iste dolor perspiciatis sint sit? Delectus sit perspiciatis necessitatibus recusandae, eligendi libero, nemo velit eos itaque cupiditate laboriosam! Natus quaerat cumque saepe totam sequi dolor obcaecati suscipit, aspernatur nihil ad quod quidem libero nesciunt, reiciendis corrupti culpa doloremque fugit, excepturi reprehenderit facere veritatis alias soluta unde. Dignissimos, quas quisquam quos rerum eius quidem incidunt, nobis, quis fugit magnam suscipit velit ullam repellat temporibus nisi aspernatur! Velit expedita similique suscipit ea animi neque sapiente, non nisi rerum a hic amet dolorem beatae, sed doloremque natus reprehenderit error reiciendis alias nulla nam quidem in quod. Laborum natus quibusdam, nemo error a dolor? Commodi, temporibus. Quod quidem atque itaque quisquam consequuntur deleniti modi. Nulla nostrum, explicabo corporis iste rerum eveniet veritatis, odio error quisquam aliquid illum consequuntur alias.</p>
+    {# <textarea>Next, use our Get Started docs to setup Tiny!</textarea> #}
+    <canvas id="myChart" width="400" height="400"></canvas>
+    {% block javascripts %}
+        <script>
+            // stats !!!
+            var ctx = document.getElementById("myChart").getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: [
+                        "Photos",
+                        "Articles",
+                        "Utilisateur",
+                        "Green",
+                        "Purple",
+                        "Orange"
+                    ],
+                    datasets: [
+                        {
+                            label: '',
+                            data: [
+                                12,
+                                19,
+                                3,
+                                5,
+                                2,
+                                3
+                            ],
+                            backgroundColor: [
+
+                                'rgba(255, 107, 129, 1.0)',
+                                'rgba(30, 144, 255,1.0)',
+                                'rgba(236, 204, 104,1.0)',
+                                'rgba(123, 237, 159,1.0)',
+                                'rgba(83, 82, 237,1.0)',
+                                'rgba(255, 165, 2,1.0)'
+                            ],
+                            borderColor: [
+                                'rgba(255,99,132,1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    scales: {
+                        yAxes: [
+                            {
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }
+                        ]
+                    }
+                }
+            });
+        </script>
+        <script>
+            // textaera
+            tinymce.init({selector: 'textarea'});
+        </script>
+    {% endblock %}
+{% endblock %}

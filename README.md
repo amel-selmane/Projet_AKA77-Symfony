@@ -1,9 +1,3 @@
-# Projet_AKA77 - Symfony
-Projet de création de site web AKA77.
+# Hello Symfony 4 !!!!
 
-Groupe :
-
-Marie
-Will
-Xavier
-Amel
+## ~~wow crack did a song with heroin, they work well together i guess....~~

@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Artists index{% endblock %}
+
+{% block body %}
+    <h1>Page d'administration des artistes</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Pseudo</th>
+                <th>Baseline</th>
+                <th>Droit</th>
+                <th>Password</th>
+                <th>UrlPageArtist</th>
+                <th>Description</th>
+                <th>EmailArtist</th>
+                <th>UrlImageAvatar</th>
+                <th>UrlSiteWebArtist</th>
+                <th>UrlFacebookArtist</th>
+                <th>UrlInstagramArtist</th>
+                <th>DateCreation</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for artist in artists %}
+            <tr>
+                <td>{{ artist.id }}</td>
+                <td>{{ artist.pseudo }}</td>
+                <td>{{ artist.baseline }}</td>
+                <td>{{ artist.droit }}</td>
+                <td>{{ artist.password }}</td>
+                <td>{{ artist.urlPageArtist }}</td>
+                <td>{{ artist.description }}</td>
+                <td>{{ artist.emailArtist }}</td>
+                <td>{{ artist.urlImageAvatar }}</td>
+                <td>{{ artist.urlSiteWebArtist }}</td>
+                <td>{{ artist.urlFacebookArtist }}</td>
+                <td>{{ artist.urlInstagramArtist }}</td>
+                <td>{{ artist.dateCreation ? artist.dateCreation|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('artists_show', {'id': artist.id}) }}">show</a>
+                    <a href="{{ path('artists_edit', {'id': artist.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="14">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('artists_new') }}">Create new</a>
+{% endblock %}
