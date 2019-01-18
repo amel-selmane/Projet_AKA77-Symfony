@@ -1,3 +1,9 @@
-# Hello Symfony 4 !!!!
+# Projet AKA 77 en Symfony
 
-## ~~wow crack did a song with heroin, they work well together i guess....~~
+Membres de l'équipe : 
+- Xavier
+- Marie
+- Will
+- Amel
+
+
