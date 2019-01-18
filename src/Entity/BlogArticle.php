@@ -53,89 +53,89 @@ class BlogArticle
      */
     private $idArtist;
 
-    public function getId(): ?int
+    public function getId() : ? int
     {
         return $this->id;
     }
 
-    public function getTitleArticle(): ?string
+    public function getTitleArticle() : ? string
     {
         return $this->titleArticle;
     }
 
-    public function setTitleArticle(string $titleArticle): self
+    public function setTitleArticle(string $titleArticle) : self
     {
         $this->titleArticle = $titleArticle;
 
         return $this;
     }
 
-    public function getUrlArticle(): ?string
+    public function getUrlArticle() : ? string
     {
         return $this->urlArticle;
     }
 
-    public function setUrlArticle(string $urlArticle): self
+    public function setUrlArticle(string $urlArticle) : self
     {
         $this->urlArticle = $urlArticle;
 
         return $this;
     }
 
-    public function getContentArticle(): ?string
+    public function getContentArticle() : ? string
     {
         return $this->contentArticle;
     }
 
-    public function setContentArticle(string $contentArticle): self
+    public function setContentArticle(string $contentArticle) : self
     {
         $this->contentArticle = $contentArticle;
 
         return $this;
     }
 
-    public function getLikeArticle(): ?int
+    public function getLikeArticle() : ? int
     {
         return $this->likeArticle;
     }
 
-    public function setLikeArticle(int $likeArticle): self
+    public function setLikeArticle(int $likeArticle) : self
     {
         $this->likeArticle = $likeArticle;
 
         return $this;
     }
 
-    public function getDateModification(): ?\DateTimeInterface
+    public function getDateModification() : ? \DateTimeInterface
     {
         return $this->dateModification;
     }
 
-    public function setDateModification(\DateTimeInterface $dateModification): self
+    public function setDateModification(\DateTimeInterface $dateModification) : self
     {
         $this->dateModification = $dateModification;
 
         return $this;
     }
 
-    public function getCategoryArticle(): ?CategoryBlog
+    public function getCategoryArticle() : ? CategoryBlog
     {
         return $this->categoryArticle;
     }
 
-    public function setCategoryArticle(?CategoryBlog $categoryArticle): self
+    public function setCategoryArticle(? CategoryBlog $categoryArticle) : self
     {
         $this->categoryArticle = $categoryArticle;
 
         return $this;
     }
 
-    public function getIdArtist(): ?Artists
+    public function getIdArtist() : ? Artists
     {
         return $this->idArtist;
     }
 
-    public function setIdArtist(?Artists $idArtist): self
+    public function setIdArtist(? Artists $idArtist) : self
     {
         $this->idArtist = $idArtist;
 

@@ -1,0 +1,367 @@
+body {
+    margin: 5px;
+}
+
+.general-galery {
+    /*  display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    flex-direction: row;*/
+    width: 100%;
+
+}
+
+footer {
+    clear: both;
+}
+
+.general-galery img {
+    object-fit: cover;
+    /*  margin: 0 0 0px;
+    width: calc(100% / 3);
+    height: 450px;
+    float: left;*/
+    transform: scale(1.1);
+    transition: all 0.6s ease-in;
+    width: 100%;
+    height: 100%;
+
+}
+
+/************* IMAGE 1  & 8*************/
+
+.general-galery a:nth-child(7n + 1) .overlay {
+    width: 66.65%;
+    /* height: 450px; */
+    right: 5px;
+    top: 60;
+    /* float: left; */
+}
+
+.general-galery a:nth-child(11n + 1) .overlay {
+    width: 66.65%;
+    height: 450px;
+    right: 5px;
+    top: 60;
+    /* float: left; */
+}
+
+
+/************* IMAGE 2 & 3 / 7 8 9*************/
+
+
+.general-galery a:nth-child(7n + 2) .overlay,
+.general-galery a:nth-child(9n + 2) .overlay {
+    width: calc(100% / 3);
+    height: 250px;
+    top: 0;
+    margin-right: 0;
+
+}
+
+
+.general-galery a:nth-child(8n + 3) .overlay,
+.general-galery a:nth-child(8n + 2) .overlay {
+    width: calc(100% / 3);
+    height: 250px;
+    top: 0;
+    margin-right: 0;
+
+}
+
+.general-galery a:nth-child(12n + 1) .overlay {
+    height: 450px;
+}
+
+.general-galery a:nth-child(1) .overlay {
+    height: 500px;
+}
+
+.general-galery a .overlay {
+    height: 300px;
+}
+
+/* 
+.general-galery a:nth-child(3n) .overlay {
+    width: calc(100% / 3);
+    height: 450px;
+    display: block;
+   float: right;
+    top: 0;
+    margin-right: 0px;
+    margin-top: 0%;
+    border: 5px solid #ffffff;
+  
+}
+*/
+
+
+
+
+.general-galery a:nth-child(5) .overlay {
+    width: calc(100% / 3);
+    /*   height: 450px;*/
+    margin: 0;
+
+}
+
+.overlay {
+    /*   width: calc(100% / 3);*/
+    transition: all 0.5s ease-in;
+    float: left;
+    width: calc(100% / 3);
+    height: 550px;
+}
+
+.general-galery a .overlay {
+    transition: all 0.3s ease-in;
+
+    overflow: hidden;
+    border: 2px solid #ffffff;
+}
+
+.general-galery a img:hover {
+    transform: scale(1.2);
+}
+
+.overlay:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+[type="submit"] {
+    border: none;
+    margin-top: 20px;
+    background: none;
+}
+
+[type="submit"]:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+/********** BOUTON LIKE **************/
+
+.like {
+    position: absolute;
+    top: 8px;
+    right: 1%;
+    font-size: 2rem;
+    /*   background: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    border-radius: 50%;*/
+    opacity: 0.9;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.like:hover {
+    cursor: pointer;
+}
+
+.like i {
+    margin-right: 5px;
+}
+
+.like .fas {
+    color: red;
+}
+
+/************* FORM *********************/
+
+.message-form {
+    color: red;
+}
+
+input {
+    margin: 0 0 20px 0;
+}
+
+/************* LIGHTBOX *****************/
+
+.lightbox {
+    height: 100%;
+
+    z-index: 999999999999999999999999;
+}
+
+.lb-data .lb-close {
+    display: block;
+    float: right;
+    width: 30px;
+    height: 30px;
+    background: url("https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/images/close.png") top right no-repeat;
+    background: none;
+
+    text-align: right;
+    outline: none;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+    opacity: 0.7;
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+
+.lb-data .lb-close:after {
+    content: "close";
+    letter-spacing: 0.5px;
+    color: #fefe07;
+    font-weight: 600;
+}
+
+.lb-closeContainer {
+    position: fixed;
+    top: 9.5%;
+    right: 11%;
+}
+
+.lb-nav a.lb-prev {
+    width: 34%;
+    margin-left: -9%;
+    float: left;
+    background: url("https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/images/prev.png") left 48% no-repeat;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0.2;
+    -webkit-transition: opacity 0.6s;
+    -moz-transition: opacity 0.6s;
+    -o-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+}
+
+.lb-nav a.lb-next:hover,
+.lb-nav a.lb-prev:hover {
+    filter: alpha(Opacity=100);
+    opacity: 0.6;
+}
+
+.lb-cancel {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    background: url("https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/images/loading.gif") no-repeat;
+}
+
+.lb-nav a.lb-next {
+    width: 64%;
+    right: 0;
+    float: right;
+    background: url("https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/images/next.png") right 48% no-repeat;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0.2;
+    -webkit-transition: opacity 0.6s;
+    -moz-transition: opacity 0.6s;
+    -o-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+}
+
+.lb-next {
+    margin-right: -8%;
+}
+
+.lb-caption {
+    display: block;
+    font-size: 0.9rem !important;
+    margin-bottom: 5px;
+}
+
+.lb-data .lb-caption a {
+    color: #007bff;
+}
+
+.lb-outerContainer {
+    width: 80% !important;
+    height: 550px !important;
+    top: 12%;
+    left: 10%;
+    position: fixed;
+}
+
+.lb-dataContainer {
+    width: 80%;
+    bottom: 12%;
+    left: 10%;
+    position: fixed;
+}
+
+.lb-container .overlay {
+    width: 100% !important;
+    height: 550px !important;
+    object-fit: cover;
+}
+
+
+.lightbox .lb-image {
+    width: 100% !important;
+    display: block;
+    height: 550px !important;
+    object-fit: cover;
+    max-width: inherit;
+    max-height: none;
+    border-radius: 3px;
+    border: 4px solid white;
+
+}
+
+@media only screen and (max-width: 900px) {
+    .general-galery a:nth-child(4n + 1) .overlay {
+        width: 50%;
+        height: 250px;
+    }
+
+    .general-galery a:nth-child(4n + 2) .overlay {
+        width: 50%;
+        height: 250px;
+    }
+
+    .general-galery a:nth-child(3n) .overlay {
+        width: 50%;
+        height: 250px;
+    }
+
+    .general-galery a:nth-child(4n) .overlay {
+        width: 50%;
+        height: 250px;
+    }
+
+    .general-galery a:nth-child(5n) .overlay {
+        width: 50%;
+        height: 250px;
+    }
+
+
+}
+
+@media only screen and (max-width: 650px) {
+    .general-galery a:nth-child(4n + 1) .overlay {
+        width: 100%;
+        height: 250px;
+    }
+
+    .general-galery a:nth-child(4n + 2) .overlay {
+        width: 100%;
+        height: 250px;
+    }
+
+    .general-galery a:nth-child(3n) .overlay {
+        width: 100%;
+        height: 250px;
+    }
+
+    .general-galery a:nth-child(4n) .overlay {
+        width: 100%;
+        height: 250px;
+    }
+
+    .general-galery a:nth-child(5n) .overlay {
+        width: 100%;
+        height: 250px;
+    }
+
+    .general-galery .overlay {
+        object-fit: cover;
+        width: 100%;
+        height: 300px;
+    }
+}

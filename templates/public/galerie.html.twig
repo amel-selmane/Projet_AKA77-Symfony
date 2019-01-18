@@ -1,0 +1,32 @@
+{% extends 'base-front.html.twig' %}
+
+{% block header %}
+
+
+   {{ parent() }}
+
+{% endblock %}
+
+
+{% block body %}
+
+
+
+ 
+   <section class="general-galery">
+        {% for gallery in gallerys %}
+  
+ 
+            <a href="{{ url('home') ~ gallery.UrlImg }}" data-lightbox="roadtrip" data-title="{{ gallery.ImgName }}  par Auteur - <span class='like'>click to <i class='fas fa-heart'></i>3</span>">
+            <div class="overlay">
+            <img src="{{ url('home') ~ gallery.UrlImg }}">
+            </div>
+            </a>
+     
+        {% endfor %}
+    </section>
+            
+
+
+
+{% endblock %}
