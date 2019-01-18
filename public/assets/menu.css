@@ -148,6 +148,7 @@ a {
 
 a:hover {
   color: yellow !important;
+  text-decoration: none !important;
 }
 
 ul li:last-child {
