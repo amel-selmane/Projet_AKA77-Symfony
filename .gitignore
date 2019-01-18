@@ -9,7 +9,6 @@
 /src/Migrations
 /var/
 /vendor/
-/MYREADME.md
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###
