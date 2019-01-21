@@ -20,17 +20,99 @@ function like() {
     // On recupere le nombre de like 
     let like = this.dataset.indexLike;
     // On recupere le type de selecteur (img ou p)
-    this.src != undefined ? (table = "gallery") : (table = "article");
+    if (this.src != undefined){
+        table = "gallery"
+        nom_like ="img_like"
+    }else {
+        (table = "blog_article")
+        nom_like = "like_article"
+    };
 
     // On incremente le nombre de like 
     let nbLike = +parseInt(like) + 1;
     // On crée l'url
     let urlFiltree =
-        window.location.href.search("table") == -1
-            ? window.location.href
-            : window.location.href.slice(0, window.location.href.search("table") - 1);
-    let _url =
-        urlFiltree + "?table=" + table + "&id=" + indexId + "&like=" + nbLike;
+        
+        window.location.href
 
-    window.location.href = _url;
+    
+
+    console.log(urlFiltree)
+
+    // test AJAX
+    $.ajax({
+        url:urlFiltree,
+        method:"POST",
+        data:{"table":table, "id":indexId, nom_like:nbLike}
+    }).done(function(){
+        console.log("Succes");
+    })
+    
 }
+
+
+/********** LIGHTBOX *************/
+
+lightbox.option({
+    'resizeDuration': 200,
+    'wrapAround': true
+})
+
+/***************** HEADER ************/
+
+// window.setInterval(() => {
+//     console.log(window.pageYOffset)
+//     if (window.pageYOffset > 100) {
+
+//         $(".header-2").fadeIn();
+
+//     }
+
+//     else
+
+//         $(".header-2").fadeOut();
+
+// }, 100)
+
+
+
+/************* BACK to TOP  *********** */
+
+window.setInterval(() => {
+    // console.log(window.pageYOffset)
+    if (window.pageYOffset > 100) {
+
+        $(".back-to-top").fadeIn();
+
+    }
+
+    else
+
+        $(".back-to-top").fadeOut();
+
+}, 100)
+
+// Smooth scroll
+$(document).ready(function () {
+
+    $(".smooth-scroll").on('click', function (event) {
+        // console.log(this.hash)
+
+        if (this.hash !== "") {
+
+            event.preventDefault();
+
+
+            var hash = this.hash;
+
+
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 1000, function () {
+
+
+                window.location.hash = hash;
+            });
+        }
+    });
+});
