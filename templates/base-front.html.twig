@@ -96,79 +96,10 @@
 <script src="{{ absolute_url(asset('assets/js/lightbox.js')) }}"></script>
 
 
-
-
 {% block javascripts %}
 
 
-<script>
 
-/********** LIGHTBOX *************/
-
-    lightbox.option({
-      'resizeDuration': 200,
-      'wrapAround': true
-    })
-
-/***************** HEADER ************/
-
-window.setInterval(() => {
-console.log(window.pageYOffset)
-      if(window.pageYOffset>100){
-
-        $(".header-2").fadeIn();
-
-       }
-
-       else
-
-     $(".header-2").fadeOut();
-
-    }, 100)
-
-
-
-/************* BACK to TOP  *********** */
-
-window.setInterval(() => {
-console.log(window.pageYOffset)
-      if(window.pageYOffset>100){
-
-        $(".back-to-top").fadeIn();
-
-       }
-
-       else
-
-     $(".back-to-top").fadeOut();
-
-    }, 100)
-    
-// Smooth scroll
-      $(document).ready(function () {
-      
-        $(".smooth-scroll").on('click', function (event) {
-          console.log(this.hash)
-
-          if (this.hash !== "") {
-      
-            event.preventDefault();
-
-         
-            var hash = this.hash;
-
-
-            $('html, body').animate({
-              scrollTop: $(hash).offset().top
-            }, 1000, function () {
-
-      
-              window.location.hash = hash;
-            });
-          } 
-        });
-      });
-</script>
         
         {% endblock %}
 
