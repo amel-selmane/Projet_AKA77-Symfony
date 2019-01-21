@@ -14,7 +14,7 @@ class ArtistsType extends AbstractType
         $builder
             ->add('pseudo')
             ->add('baseline')
-            ->add('droit')
+            // ->add('droit')
             ->add('password')
             ->add('urlPageArtist')
             ->add('description')

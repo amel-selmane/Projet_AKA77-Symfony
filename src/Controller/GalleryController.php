@@ -25,7 +25,7 @@ class GalleryController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="gallery_new", methods={"GET","POST"})
+     * @Route("/nouvelle", name="gallery_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -58,7 +58,7 @@ class GalleryController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="gallery_edit", methods={"GET","POST"})
+     * @Route("/{id}/edition", name="gallery_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Gallery $gallery): Response
     {

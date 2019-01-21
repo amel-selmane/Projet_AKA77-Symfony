@@ -11,12 +11,12 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/artists")
+ * @Route("/admin/artistes")
  */
 class ArtistsController extends AbstractController
 {
     /**
-     * @Route("/admin/artistes", name="adminArtistes", methods={"GET"})
+     * @Route("/", name="adminArtistes", methods={"GET"})
      */
     public function index(ArtistsRepository $artistsRepository): Response
     {
@@ -26,7 +26,7 @@ class ArtistsController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="artists_new", methods={"GET","POST"})
+     * @Route("/nouveau", name="artists_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -59,7 +59,7 @@ class ArtistsController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="artists_edit", methods={"GET","POST"})
+     * @Route("/{id}/edition", name="artists_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Artists $artist): Response
     {

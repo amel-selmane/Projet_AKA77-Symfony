@@ -10,10 +10,13 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * @Route("/admin/blog")
+ */
 class BlogArticleController extends AbstractController
 {
     /**
-     * @Route("/admin/blog", name="adminBlog", methods={"GET"})
+     * @Route("/", name="adminBlog", methods={"GET"})
      */
     public function index(BlogArticleRepository $blogArticleRepository): Response
     {
@@ -23,7 +26,7 @@ class BlogArticleController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="blog_article_new", methods={"GET","POST"})
+     * @Route("/nouveau", name="blog_article_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -56,7 +59,7 @@ class BlogArticleController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="blog_article_edit", methods={"GET","POST"})
+     * @Route("/{id}/edition", name="blog_article_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, BlogArticle $blogArticle): Response
     {
