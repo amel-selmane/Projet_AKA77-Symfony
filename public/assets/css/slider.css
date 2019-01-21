@@ -1,0 +1,238 @@
+/* ************ SLIDER HOME *********** */
+
+#slider {
+    margin: -85px 0 0 0;
+    padding: 0;
+    height: 80%;
+}
+
+#caroussel-home a {
+    color: #000000;
+}
+
+#caroussel-home a:hover {
+    color: #555555;
+}
+
+#caroussel-home h2 {
+    font-size: 2.5rem;
+    padding: 0 0 10px 0;
+    /*   text-shadow: 2px 2px 2px #000000;*/
+}
+
+#caroussel-home p {
+    font-size: 1.3rem;
+    font-weight: normal;
+    /*   text-shadow: 2px 2px 2px #000000;*/
+}
+
+.carousel-inner {
+    background: #000000;
+}
+
+.carousel-item {
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    margin-top: 0px;
+    padding-top: 0px;
+    object-fit: cover;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.carousel-caption {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    top: 33%;
+    z-index: 9999999999999999999999;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+}
+
+.carousel-caption h1 {
+    color: #ffffff;
+    text-shadow: 2px 2px 2px #000000;
+    text-align: center;
+    margin: 40px 0 40px 0px;
+    font-size: 4.5rem;
+    opacity: 0.6;
+    display: none;
+}
+
+.carousel-caption h1 span {
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 15%;
+    color: #fff;
+    text-align: center;
+    opacity: 0.5;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: none;
+}
+
+/* ************ SLIDER ARTISTE *********** */
+
+.artiste h5 {
+    text-transform: uppercase;
+}
+
+#slider-art {
+    height: 300px;
+    padding: 0;
+    display: flex;
+    border: 0px solid #cccccc;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    padding: 20px 0;
+    position: relative;
+}
+
+#carroussel-artiste {
+    margin: 0 30px 0 5px;
+    position: relative;
+}
+
+.carousel-inner {
+
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 250px;
+
+}
+
+#caroussel-artiste a {
+    color: #000000;
+}
+
+#caroussel-artiste a:hover {
+    color: #555555;
+}
+
+#caroussel-artiste h2 {
+    font-size: 2.5rem;
+    padding: 0 0 10px 0;
+    /*   text-shadow: 2px 2px 2px #000000;*/
+}
+
+#caroussel-artiste p {
+    font-size: 1.3rem;
+    font-weight: normal;
+    /* text-shadow: 2px 2px 2px #000000;*/
+}
+
+#caroussel-artiste .carousel-item {
+    height: 650px;
+    overflow: hidden;
+
+}
+
+#caroussel-artiste .carousel-item img {
+    margin-top: 30px;
+    padding-top: 0px;
+    object-fit: cover;
+}
+
+.w-100 {
+
+    width: 100% !important;
+    height: 600px;
+    object-fit: cover;
+
+}
+
+#caroussel-artiste .carousel-caption {
+
+    position: relative;
+
+    left: 0;
+    z-index: 9999999999999999999999;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+}
+
+
+#caroussel-artiste .carousel-caption h1 {
+    color: #ffffff;
+    text-shadow: 2px 2px 2px #000000;
+    text-align: center;
+    display: none;
+
+}
+
+#caroussel-artiste .carousel-caption h1 span {
+    color: #ffffff;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 5%;
+    color: #fff;
+    text-align: center;
+    opacity: .5;
+
+}
+
+
+/*****  zoom ******/
+
+.zoom {
+    color: white;
+    position: absolute;
+    font-size: 15px;
+    top: 20px;
+    left: 30px;
+    z-index: 99999;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 5px 5px 5px 7px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+@media only screen and (max-width: 800px) {
+
+    #carroussel-artiste {
+        display: none;
+
+
+    }
+
+}
