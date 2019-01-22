@@ -6,6 +6,9 @@ use App\Entity\Gallery;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 
 class GalleryType extends AbstractType
 {
@@ -13,10 +16,10 @@ class GalleryType extends AbstractType
     {
         $builder
             ->add('imgName')
-            ->add('urlImgOriginal')
-            // ->add('imgLike')
-            // ->add('dateUpdate')
-            // ->add('idArtist')
+            ->add('uploadGalleryForm', FileType::class)
+            ->add('imgLike')
+            ->add('dateUpdate')
+            ->add('idArtist')
         ;
     }
 
