@@ -1,11 +1,14 @@
 body,
 html {
-  /* background: linear-gradient(to right, #765d69, #8fb9a8); */
   font-family: Roboto Mono;
   height: 100%;
   margin: 0;
+<<<<<<< HEAD:public/assets/css/menu.css
   /* background: rgba(164, 176, 190, 1.0); */
   background-color: #3c6382 !important;
+=======
+  background-color: #ddd !important;
+>>>>>>> origin:public/assets/menu.css
 }
 
 * {
@@ -139,14 +142,16 @@ li:first-of-type {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
-
+/*
 a {
   color: #ddd !important;
   text-decoration: none;
 }
+*/
 
 a:hover {
   color: yellow !important;
+  text-decoration: none !important;
 }
 
 ul li:last-child {
@@ -163,7 +168,7 @@ ul li:last-child {
   border: 2px #ddd solid;
   padding: 1px;
   background: #ddd;
-  border-radius: 5%;
+  border-radius: 5px;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
 }
@@ -172,6 +177,11 @@ ul li:last-child {
   -webkit-filter: brightness(0.25);
 }
 
+<<<<<<< HEAD:public/assets/css/menu.css
+=======
+#baseContent {
+}
+>>>>>>> origin:public/assets/menu.css
 
 #content {
   padding: 25px;
@@ -181,9 +191,7 @@ ul li:last-child {
   text-align: center;
   margin: auto;
   color: #ddd;
-  /* display: inline-block; */
   padding: 15px;
-  /* float: right; */
 }
 
 #date {
@@ -222,10 +230,14 @@ h2 {
 }
 
 h1 {
+<<<<<<< HEAD:public/assets/css/menu.css
   text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.0);
   text-decoration: underline;
    text-align: center; 
    margin-bottom: 40px !important;
+=======
+  text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+>>>>>>> origin:public/assets/menu.css
 }
 
 article {
@@ -242,95 +254,6 @@ li:first-of-type {
   margin-top: 30px;
 }
 
-/* Animation du Logo */
-
-@-webkit-keyframes jackInTheBox {
-  from {
-    opacity: 0;
-    -webkit-transform: scale(0.1) rotate(30deg);
-    transform: scale(0.1) rotate(30deg);
-    -webkit-transform-origin: center bottom;
-    transform-origin: center bottom;
-  }
-
-  50% {
-    -webkit-transform: rotate(-10deg);
-    transform: rotate(-10deg);
-  }
-
-  70% {
-    -webkit-transform: rotate(3deg);
-    transform: rotate(3deg);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-@keyframes jackInTheBox {
-  from {
-    opacity: 0;
-    -webkit-transform: scale(0.1) rotate(30deg);
-    transform: scale(0.1) rotate(30deg);
-    -webkit-transform-origin: center bottom;
-    transform-origin: center bottom;
-  }
-
-  50% {
-    -webkit-transform: rotate(-10deg);
-    transform: rotate(-10deg);
-  }
-
-  70% {
-    -webkit-transform: rotate(3deg);
-    transform: rotate(3deg);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-.jackInTheBox {
-  -webkit-animation-name: jackInTheBox;
-  animation-name: jackInTheBox;
-  animation-duration: 1.5s;
-  margin-top: 30px;
-}
-
-@-webkit-keyframes jackInTheBox {
-  from {
-    opacity: 0;
-    -webkit-transform: scale(0.1) rotate(30deg);
-    transform: scale(0.1) rotate(30deg);
-    -webkit-transform-origin: center bottom;
-    transform-origin: center bottom;
-  }
-
-  50% {
-    -webkit-transform: rotate(-10deg);
-    transform: rotate(-10deg);
-  }
-
-  70% {
-    -webkit-transform: rotate(3deg);
-    transform: rotate(3deg);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-@keyframes jackInTheBox {
-  from {
     opacity: 0;
     -webkit-transform: scale(0.1) rotate(30deg);
     transform: scale(0.1) rotate(30deg);
@@ -414,31 +337,6 @@ li:first-of-type {
   margin-top: 20px;
 }
 
-/* dragula  
-
-.gu-mirror {
-  position: fixed !important;
-  margin: 0 !important;
-  z-index: 9999 !important;
-  opacity: 0.8;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-  filter: alpha(opacity=80);
+form {
+	padding: 30px 20%;
 }
-.gu-hide {
-  display: none !important;
-}
-.gu-unselectable {
-  -webkit-user-select: none !important;
-  -moz-user-select: none !important;
-  -ms-user-select: none !important;
-  user-select: none !important;
-}
-.gu-transit {
-  opacity: 0.2;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
-  filter: alpha(opacity=20);
-}
-
-
-*/
-
