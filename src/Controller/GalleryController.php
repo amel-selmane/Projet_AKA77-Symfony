@@ -44,10 +44,15 @@ class GalleryController extends AbstractController
         
             $objUploadedFile = $gallery->uploadGalleryForm;
             $dossierCible = $this->getParameter('monDossierUpload');
+        
+
             $nomOrigine = $objMonUpload->gererUpload($objUploadedFile, $dossierCible);
+            
+    
             if ($nomOrigine != "") {
                 $gallery->setUrlImgOriginal("assets/img/upload/$nomOrigine");
                 $gallery->setDateUpdate(new \Datetime);
+                $gallery->setImgLike(0);
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->persist($gallery);
                 $entityManager->flush();

@@ -17,8 +17,8 @@ class GalleryType extends AbstractType
         $builder
             ->add('imgName')
             ->add('uploadGalleryForm', FileType::class)
-            ->add('imgLike')
-            ->add('dateUpdate')
+            // ->add('imgLike')
+            // ->add('dateUpdate')
             ->add('idArtist')
         ;
     }

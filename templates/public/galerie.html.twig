@@ -15,7 +15,7 @@
   {% for image in gallerys %}
    <section class="general-galery">
            
-            <a href="{{image.urlImgOriginal}}" data-lightbox="roadtrip" data-title=" Titre de l'image par Auteur - <span class='like'>click to <i class='fas fa-heart'></i>3</span>">
+            <a href="{{image.urlImgOriginal}}" data-lightbox="roadtrip" data-title="{{image.imgName}}  par Auteur <span class='like'>click to <i class='fas fa-heart'></i>3</span>">
             <div class="overlay">
             <img src="{{image.urlImgOriginal}}" data-index-id={{image.id}}
         data-index-like={{image.imgLike}}>
