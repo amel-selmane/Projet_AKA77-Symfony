@@ -22,7 +22,7 @@
                 <td>{{ gallery.id }}</td>
                 <td>{{ gallery.imgName }}</td>
                 <td>{{ gallery.urlImgOriginal }}</td>
-                <td>{{ gallery.imgLike }}</td>
+                <td>{{ gallery.imgLike}}</td>
                 <td>{{ gallery.dateUpdate ? gallery.dateUpdate|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
                     <a href="{{ path('gallery_show', {'id': gallery.id}) }}">show</a>
