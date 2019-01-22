@@ -1,9 +1,9 @@
 <?php
-
 namespace App\Form;
 
 use App\Entity\Gallery;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -13,13 +13,12 @@ class GalleryType extends AbstractType
     {
         $builder
             ->add('imgName')
-            ->add('urlImgOriginal')
+            ->add('uploadGalleryForm', FileType::class)
             // ->add('imgLike')
             // ->add('dateUpdate')
-            // ->add('idArtist')
+            ->add('idArtist')
         ;
     }
-
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
@@ -27,3 +26,4 @@ class GalleryType extends AbstractType
         ]);
     }
 }
+
