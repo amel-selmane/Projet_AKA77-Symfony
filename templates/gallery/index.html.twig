@@ -23,8 +23,13 @@
             {#   <tr>
                 <td>{{ gallery.id }}</td>
                 <td>{{ gallery.imgName }}</td>
+<<<<<<< HEAD
                 <td><img src="{{ asset( gallery.urlImgOriginal) }}" alt="{{ gallery.imgName }}" style="width:150px; height:100px; object-fit:cover; border-radius:20px;"></td>
                 <td>{{ gallery.imgLike }}</td>
+=======
+                <td>{{ gallery.urlImgOriginal }}</td>
+                <td>{{ gallery.imgLike}}</td>
+>>>>>>> 20dc5a8aa44b5a31c0b9b84dd843c1ec96eeefa1
                 <td>{{ gallery.dateUpdate ? gallery.dateUpdate|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
                     <a href="{{ path('gallery_show', {'id': gallery.id}) }}">show</a>

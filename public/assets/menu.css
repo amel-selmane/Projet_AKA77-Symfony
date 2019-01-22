@@ -42,7 +42,7 @@ html {
   left: 25px;
   font-size: 10px;
   z-index: 1;
-  transition: all 300ms ease-in-out;
+  transition: all 175ms ease-in-out;
 }
 
 li:first-of-type {
@@ -73,7 +73,7 @@ li:first-of-type {
   height: 100%;
   padding: 20px;
   background-color: #212121;
-  transition: all 75ms ease-in-out;
+  transition: all 175ms ease-in-out;
   box-sizing: content-box !important;
 }
 

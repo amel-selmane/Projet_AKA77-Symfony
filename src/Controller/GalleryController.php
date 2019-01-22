@@ -29,7 +29,11 @@ class GalleryController extends AbstractController
     /**
      * @Route("/nouvelle", name="gallery_new", methods={"GET","POST"})
      */
+<<<<<<< HEAD
     public function new(Request $request, Upload $objMonUpload) : Response
+=======
+    public function new(Request $request, Upload $objMonUpload): Response
+>>>>>>> 20dc5a8aa44b5a31c0b9b84dd843c1ec96eeefa1
     {
         $gallery = new Gallery();
         $form = $this->createForm(GalleryType::class, $gallery);
@@ -38,11 +42,24 @@ class GalleryController extends AbstractController
             // $entityManager = $this->getDoctrine()->getManager();
             // $entityManager->persist($gallery);
             // $entityManager->flush();
+<<<<<<< HEAD
             // return $this->redirectToRoute('gallery_index');
 
             $objUploadedFile = $gallery->uploadGalleryForm;
             $dossierCible = $this->getParameter('monDossierUpload');
             $nomOrigine = $objMonUpload->gererUpload($objUploadedFile, $dossierCible);
+=======
+
+            // return $this->redirectToRoute('gallery_index');
+        
+            $objUploadedFile = $gallery->uploadGalleryForm;
+            $dossierCible = $this->getParameter('monDossierUpload');
+        
+
+            $nomOrigine = $objMonUpload->gererUpload($objUploadedFile, $dossierCible);
+            
+    
+>>>>>>> 20dc5a8aa44b5a31c0b9b84dd843c1ec96eeefa1
             if ($nomOrigine != "") {
                 $gallery->setUrlImgOriginal("assets/img/upload/$nomOrigine");
                 $gallery->setDateUpdate(new \Datetime);
@@ -54,7 +71,11 @@ class GalleryController extends AbstractController
             } else {
                 $messageForm = "ERREUR SUR LE FICHIER UPLOAD";
             }
+<<<<<<< HEAD
             return $this->redirectToRoute('adminGalerie');
+=======
+           return $this->redirectToRoute('adminGalerie');
+>>>>>>> 20dc5a8aa44b5a31c0b9b84dd843c1ec96eeefa1
         }
         return $this->render('gallery/new.html.twig', [
             'gallery' => $gallery,
