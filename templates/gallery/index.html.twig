@@ -6,35 +6,7 @@
     <h1 style ="margin-bottom:50px;">Page d'administration de la galerie</h1>
 
 <section style="display:flex; justify-content:sflex-start; flex-wrap:wrap; margin-bottom:50px; ">
-    {# <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>ImgName</th>
-                <th>UrlImgOriginal</th>
-                <th>ImgLike</th>
-                <th>DateUpdate</th>
-                <th>actions</th>
-                
-            </tr>
-        </thead>
-        <tbody>#}
         {% for gallery in galleries %}
-            {#   <tr>
-                <td>{{ gallery.id }}</td>
-                <td>{{ gallery.imgName }}</td>
-                <td><img src="{{ asset( gallery.urlImgOriginal) }}" alt="{{ gallery.imgName }}" style="width:150px; height:100px; object-fit:cover; border-radius:20px;"></td>
-                <td>{{ gallery.imgLike }}</td>
-                <td>{{ gallery.dateUpdate ? gallery.dateUpdate|date('Y-m-d H:i:s') : '' }}</td>
-                <td>
-                    <a href="{{ path('gallery_show', {'id': gallery.id}) }}">show</a>
-                    <a href="{{ path('gallery_edit', {'id': gallery.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="6">no records found</td>
-            </tr> #}
             <figure style="text-align:center;  padding:20px;">
   <img src="{{ asset( gallery.urlImgOriginal) }}" alt="{{ gallery.imgName }}" style="width:250px; height:200px; object-fit:cover; border-radius:20px; box-shadow:0 0 20px gray;">
   <figcaption><strong>{{ gallery.imgName }}</strong></figcaption>
@@ -42,8 +14,6 @@
                     <a href="{{ path('gallery_edit', {'id': gallery.id}) }}" class="btn btn-danger">Editer</a>
 </figure>
         {% endfor %}
-        {# </tbody> #}
-    {# </table> #}
 </section>
     <a class="btn btn-success" href="{{ path('gallery_new') }}">Ajouter une nouvelle Image</a>
 {% endblock %}
