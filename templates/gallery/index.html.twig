@@ -14,6 +14,7 @@
                 <th>ImgLike</th>
                 <th>DateUpdate</th>
                 <th>actions</th>
+                
             </tr>
         </thead>
         <tbody>
@@ -21,7 +22,7 @@
             <tr>
                 <td>{{ gallery.id }}</td>
                 <td>{{ gallery.imgName }}</td>
-                <td>{{ gallery.urlImgOriginal }}</td>
+                <td><img src="{{ gallery.urlImgOriginal }}" alt="{{ gallery.imgName }}"></td>
                 <td>{{ gallery.imgLike }}</td>
                 <td>{{ gallery.dateUpdate ? gallery.dateUpdate|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
