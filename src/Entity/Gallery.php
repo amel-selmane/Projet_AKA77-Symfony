@@ -27,6 +27,7 @@ class Gallery
      * @ORM\Column(type="string", length=255)
      */
     private $urlImgOriginal;
+    public $uploadGalleryForm;
 
     /**
      * @ORM\Column(type="integer")

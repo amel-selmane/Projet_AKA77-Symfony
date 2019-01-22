@@ -9,6 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Commun\Upload;
     /**
      * @Route("/admin/galerie")
      */
@@ -27,18 +28,33 @@ class GalleryController extends AbstractController
     /**
      * @Route("/nouvelle", name="gallery_new", methods={"GET","POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request, Upload $objMonUpload): Response
     {
         $gallery = new Gallery();
         $form = $this->createForm(GalleryType::class, $gallery);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($gallery);
-            $entityManager->flush();
+            // $entityManager = $this->getDoctrine()->getManager();
+            // $entityManager->persist($gallery);
+            // $entityManager->flush();
 
-            return $this->redirectToRoute('gallery_index');
+            // return $this->redirectToRoute('gallery_index');
+        
+            $objUploadedFile = $gallery->uploadGalleryForm;
+            $dossierCible = $this->getParameter('monDossierUpload');
+            $nomOrigine = $objMonUpload->gererUpload($objUploadedFile, $dossierCible);
+            if ($nomOrigine != "") {
+                $gallery->setUrlImgOriginal("assets/img/upload/$nomOrigine");
+                $gallery->setDateUpdate(new \Datetime);
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->persist($gallery);
+                $entityManager->flush();
+                $messageForm = "Votre image est maintenant publié";
+            } else {
+                $messageForm = "ERREUR SUR LE FICHIER UPLOAD";
+            }
+           return $this->redirectToRoute('adminGalerie');
         }
 
         return $this->render('gallery/new.html.twig', [
