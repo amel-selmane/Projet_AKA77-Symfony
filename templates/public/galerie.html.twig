@@ -12,13 +12,13 @@
 
 
 
-  {% for toto in gallerys %}
+  {% for image in gallerys %}
    <section class="general-galery">
            
-            <a href="{{toto.urlImgOriginal}}" data-lightbox="roadtrip" data-title=" Titre de l'image par Auteur - <span class='like'>click to <i class='fas fa-heart'></i>3</span>">
+            <a href="{{image.urlImgOriginal}}" data-lightbox="roadtrip" data-title=" Titre de l'image par Auteur - <span class='like'>click to <i class='fas fa-heart'></i>3</span>">
             <div class="overlay">
-            <img src="{{toto.urlImgOriginal}}" data-index-id={{toto.id}}
-        data-index-like={{toto.imgLike}}>
+            <img src="{{image.urlImgOriginal}}" data-index-id={{image.id}}
+        data-index-like={{image.imgLike}}>
             </div>
 
        
