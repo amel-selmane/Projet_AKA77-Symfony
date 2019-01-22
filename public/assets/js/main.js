@@ -41,7 +41,7 @@ function like() {
     $.ajax({
       url: window.location.href,
       method: "get",
-      data: { table: table, id: indexId, img_like: nbLike }
+      data: { table: table, id: indexId, [nom_like]: nbLike }
     })
       .done(function() {
         console.log("Succes");

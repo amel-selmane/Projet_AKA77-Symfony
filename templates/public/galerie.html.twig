@@ -12,89 +12,18 @@
 
 
 
- 
+  {% for toto in gallerys %}
    <section class="general-galery">
- 
-            <a href="assets/img/upload/1.jpeg" data-lightbox="roadtrip" data-title=" Titre de l'image par Auteur - <span class='like'>click to <i class='fas fa-heart'></i>3</span>">
-            <div class="overlay">
-            <img src="assets/img/upload/1.jpeg" data-index-id="1"
-        data-index-like="3">
-            </div>
-
-            <a href="assets/img/upload/1.jpeg" data-lightbox="roadtrip" data-title=" Titre de l'image par Auteur - <span class='like'>click to <i class='fas fa-heart'></i>3</span>">
-            <div class="overlay">
-            <img src="assets/img/upload/1.jpeg">
-            </div>
-
-            <a href="assets/img/upload/1.jpeg" data-lightbox="roadtrip" data-title=" Titre de l'image par Auteur - <span class='like'>click to <i class='fas fa-heart'></i>3</span>">
-            <div class="overlay">
-            <img src="assets/img/upload/1.jpeg">
-            </div>
-
-            <a href="assets/img/upload/1.jpeg" data-lightbox="roadtrip" data-title=" Titre de l'image par Auteur - <span class='like'>click to <i class='fas fa-heart'></i>3</span>">
-            <div class="overlay">
-            <img src="assets/img/upload/1.jpeg">
-            </div>
-
-            <a href="assets/img/upload/1.jpeg" data-lightbox="roadtrip" data-title=" Titre de l'image par Auteur - <span class='like'>click to <i class='fas fa-heart'></i>3</span>">
-            <div class="overlay">
-            <img src="assets/img/upload/1.jpeg">
-            </div>
-
-            <a href="assets/img/upload/1.jpeg" data-lightbox="roadtrip" data-title=" Titre de l'image par Auteur - <span class='like'>click to <i class='fas fa-heart'></i>3</span>">
-            <div class="overlay">
-            <img src="assets/img/upload/1.jpeg">
-            </div>
-
-            <a href="assets/img/upload/1.jpeg" data-lightbox="roadtrip" data-title=" Titre de l'image par Auteur - <span class='like'>click to <i class='fas fa-heart'></i>3</span>">
-            <div class="overlay">
-            <img src="assets/img/upload/1.jpeg">
-            </div>
-
-            <a href="assets/img/upload/1.jpeg" data-lightbox="roadtrip" data-title=" Titre de l'image par Auteur - <span class='like'>click to <i class='fas fa-heart'></i>3</span>">
-            <div class="overlay">
-            <img src="assets/img/upload/1.jpeg">
-            </div>
-
-            <a href="assets/img/upload/1.jpeg" data-lightbox="roadtrip" data-title=" Titre de l'image par Auteur - <span class='like'>click to <i class='fas fa-heart'></i>3</span>">
-            <div class="overlay">
-            <img src="assets/img/upload/1.jpeg">
-            </div>
-
-            <a href="assets/img/upload/1.jpeg" data-lightbox="roadtrip" data-title=" Titre de l'image par Auteur - <span class='like'>click to <i class='fas fa-heart'></i>3</span>">
-            <div class="overlay">
-            <img src="assets/img/upload/1.jpeg">
-            </div>
-
-            <a href="assets/img/upload/1.jpeg" data-lightbox="roadtrip" data-title=" Titre de l'image par Auteur - <span class='like'>click to <i class='fas fa-heart'></i>3</span>">
-            <div class="overlay">
-            <img src="assets/img/upload/1.jpeg">
-            </div>
-
-            <a href="assets/img/upload/1.jpeg" data-lightbox="roadtrip" data-title=" Titre de l'image par Auteur - <span class='like'>click to <i class='fas fa-heart'></i>3</span>">
-            <div class="overlay">
-            <img src="assets/img/upload/1.jpeg">
-            </div>
-
-            <a href="assets/img/upload/1.jpeg" data-lightbox="roadtrip" data-title=" Titre de l'image par Auteur - <span class='like'>click to <i class='fas fa-heart'></i>3</span>">
-            <div class="overlay">
-            <img src="assets/img/upload/1.jpeg">
-            </div>
-
-            <a href="assets/img/upload/1.jpeg" data-lightbox="roadtrip" data-title=" Titre de l'image par Auteur - <span class='like'>click to <i class='fas fa-heart'></i>3</span>">
-            <div class="overlay">
-            <img src="assets/img/upload/1.jpeg">
-            </div>
-
-            <a href="assets/img/upload/1.jpeg" data-lightbox="roadtrip" data-title=" par Auteur - <span class='like'>click to <i class='fas fa-heart'></i>3</span>">
-            <div class="overlay">
-            <img src="assets/img/upload/1.jpeg">
-            </div>
            
+            <a href="{{toto.urlImgOriginal}}" data-lightbox="roadtrip" data-title=" Titre de l'image par Auteur - <span class='like'>click to <i class='fas fa-heart'></i>3</span>">
+            <div class="overlay">
+            <img src={{toto.urlImgOriginal}}" data-index-id={{toto.id}}
+        data-index-like={{toto.imgLike}}>
+            </div>
 
        
     </section>
             
-
+ {% endfor  %}
 
 {% endblock %}

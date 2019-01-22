@@ -16,9 +16,11 @@ class PublicController extends AbstractController
      */
     public function gallery(GalleryRepository $galleryRepository) : Response
     {
-
-        return $this->render('public/galerie.html.twig');
-
+        $listeGallery = $galleryRepository->findBy([], ["dateUpdate" => "DESC"]);
+        dump($listeGallery);
+        return $this->render('public/galerie.html.twig', [
+            'gallerys' => $listeGallery,
+        ]);
     }
 
 }
