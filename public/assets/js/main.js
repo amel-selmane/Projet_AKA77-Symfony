@@ -1,3 +1,7 @@
+//************** LIKE ****************
+
+
+
 // On choisit les selecteur
 premierSelecteur = "img"
 deuxiemeSelecteur = "p"
@@ -30,23 +34,21 @@ function like() {
 
     // On incremente le nombre de like 
     let nbLike = +parseInt(like) + 1;
-    // On crée l'url
-    let urlFiltree =
-        
-        window.location.href
 
-    
-
-    console.log(urlFiltree)
+   
 
     // test AJAX
     $.ajax({
-        url:urlFiltree,
-        method:"POST",
-        data:{"table":table, "id":indexId, nom_like:nbLike}
-    }).done(function(){
-        console.log("Succes");
+      url: window.location.href,
+      method: "get",
+      data: { table: table, id: indexId, img_like: nbLike }
     })
+      .done(function() {
+        console.log("Succes");
+      })
+      .catch(() => {
+        console.log("KO");
+      });
     
 }
 
@@ -64,7 +66,7 @@ lightbox.option({
 //     console.log(window.pageYOffset)
 //     if (window.pageYOffset > 100) {
 
-//         $(".header-2").fadeIn();
+//         
 
 //     }
 
@@ -79,15 +81,15 @@ lightbox.option({
 /************* BACK to TOP  *********** */
 
 window.setInterval(() => {
-    // console.log(window.pageYOffset)
+  
     if (window.pageYOffset > 100) {
-
+      
         $(".back-to-top").fadeIn();
 
     }
 
     else
-
+  
         $(".back-to-top").fadeOut();
 
 }, 100)
