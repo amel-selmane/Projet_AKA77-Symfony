@@ -63,22 +63,6 @@ lightbox.option({
     'wrapAround': true
 })
 
-/***************** HEADER ************/
-
-// window.setInterval(() => {
-//     console.log(window.pageYOffset)
-//     if (window.pageYOffset > 100) {
-
-//         
-
-//     }
-
-//     else
-
-//         $(".header-2").fadeOut();
-
-// }, 100)
-
 
 
 /************* BACK to TOP  *********** */
