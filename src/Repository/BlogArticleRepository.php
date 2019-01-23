@@ -47,4 +47,16 @@ class BlogArticleRepository extends ServiceEntityRepository
         ;
     }
     */
+
+
+    public function listeArticle()
+    {
+        return $this
+            ->createQueryBuilder('a')
+            ->orderBy('a.dateUpdate', 'DESC')
+            //->setMaxResults(10)
+            ->getQuery() // TRANSFORM DQL EN SQL
+            ->getResult() // LANCE LA REQUETE ET RECUPERE LES RESULTATS;
+            ;
+    }
 }

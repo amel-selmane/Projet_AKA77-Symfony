@@ -2,46 +2,58 @@
 
 namespace App\Controller;
 
+
+use App\Repository\BlogArticleRepository;
 use App\Repository\GalleryRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Serializer\SerializerInterface;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
 
 class AjaxController extends AbstractController
 {
     /**
      * @Route("/ajax", name="ajax")
      */
-    public function index(Request $request, GalleryRepository $galleryRepository)
+    public function index(Request $request, GalleryRepository $galleryRepository, BlogArticleRepository $articleRepository, SerializerInterface $serializer)
     {
-        // $table = $request->get("table");
 
-// if ($table != "") {
-        //     // $table = $request->get("table");
-        $id = $request->get("id");
-// $nbLike = $request->get("nbLike");
+        $table = $request->get("table");
+        $tabAsso = [];
 
-//     if ($table == "gallery") {
-        //         $nomLike = "img_like";
-        //     } else {
-        //         $nomLike = "like_article";
-        //     }}
+        switch ($table) {
+            case "gallery":
+                $id = $request->get("id");
+                $entityManager = $this->getDoctrine()->getManager();
+                $entite = $galleryRepository->find($id);
+                $nbLike = $entite->getImgLike() + 1;
+                $entite->setImgLike($nbLike);
+                $entityManager->flush();
+                $tabImage = $galleryRepository->listeImage();
+                $tabAsso["tabImage"] = $tabImage;
+                break;
 
-        $entityManager = $this->getDoctrine()->getManager();
-        $img = $galleryRepository->find($id);
-        $nbLike = $img->getImgLike("imgLike") + 1;
-        $img->setImgLike($nbLike);
+            case "article":
+                $id = $request->get("id");
+                $entityManager = $this->getDoctrine()->getManager();
+                $entite = $galleryRepository->find($id);
+                $nbLike = $entite->getLikeArticle();
+                $entite->setLikeArticle($nbLike);
+                $entityManager->flush();
+                $tabArticle = $galleryRepository->listeArticle();
+                $tabAsso["tabArticle"] = $tabArticle;
+                break;
 
-// dump($img->getImgLike("imgLike"));
-        $entityManager->flush();
+        }
 
-// $strSQL="UPDATE $table SET $nomLike = $nbLike WHERE id = $idImage;";
+        $tabAssoJson = $serializer->serialize(
+            $tabAsso,
+            "json"
+        );
 
-        return $this->render('ajax/index.html.twig', [
-        'controller_name' => 'AjaxController',
-        ]);
-    //    return JsonResponse::create($data, 200)
-    // ->setSharedMaxAge(300);
+        return JsonResponse::fromJsonString($tabAssoJson);
 
     }
 }

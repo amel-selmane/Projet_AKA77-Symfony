@@ -25,26 +25,37 @@ class GalleryRepository extends ServiceEntityRepository
     /*
     public function findByExampleField($value)
     {
-        return $this->createQueryBuilder('g')
-            ->andWhere('g.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('g.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
+    return $this->createQueryBuilder('g')
+    ->andWhere('g.exampleField = :val')
+    ->setParameter('val', $value)
+    ->orderBy('g.id', 'ASC')
+    ->setMaxResults(10)
+    ->getQuery()
+    ->getResult()
+    ;
     }
-    */
+     */
 
     /*
     public function findOneBySomeField($value): ?Gallery
     {
-        return $this->createQueryBuilder('g')
-            ->andWhere('g.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
+    return $this->createQueryBuilder('g')
+    ->andWhere('g.exampleField = :val')
+    ->setParameter('val', $value)
+    ->getQuery()
+    ->getOneOrNullResult()
+    ;
+    }
+     */
+
+    public function listeImage()
+    {
+        return $this
+            ->createQueryBuilder('a')
+            ->orderBy('a.dateUpdate', 'DESC')
+            //->setMaxResults(10)
+            ->getQuery() // TRANSFORM DQL EN SQL
+            ->getResult() // LANCE LA REQUETE ET RECUPERE LES RESULTATS
         ;
     }
-    */
 }
