@@ -26,25 +26,28 @@ function like() {
     // On recupere le type de selecteur (img ou p)
     if (this.src != undefined){
         table = "gallery"
-        nom_like ="img_like"
+       
     }else {
         (table = "blog_article")
-        nom_like = "like_article"
+      
     };
 
     // On incremente le nombre de like 
-    let nbLike = +parseInt(like) + 1;
+    // let nbLike = +parseInt(like) + 1;
 
-   
+   // on remplace galerie ou article par ajax
+    const dossier = window.location.href.lastIndexOf("/");
+    const domaine = window.location.href.slice(0, dossier);
+    const url_ =domaine+"/ajax"
 
     // test AJAX
     $.ajax({
-      url: window.location.href,
+      url: url_,
       method: "get",
-      data: { table: table, id: indexId, [nom_like]: nbLike }
+      data: { table: table, id: indexId}
     })
       .done(function() {
-        console.log("Succes");
+        // console.log("Succes");
       })
       .catch(() => {
         console.log("KO");
