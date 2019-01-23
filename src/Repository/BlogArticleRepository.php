@@ -53,10 +53,9 @@ class BlogArticleRepository extends ServiceEntityRepository
     {
         return $this
             ->createQueryBuilder('a')
-            ->orderBy('a.dateUpdate', 'DESC')
-            //->setMaxResults(10)
-            ->getQuery() // TRANSFORM DQL EN SQL
-            ->getResult() // LANCE LA REQUETE ET RECUPERE LES RESULTATS;
+            ->orderBy('a.id', 'DESC')
+            ->getQuery() 
+            ->getResult() 
             ;
     }
 }

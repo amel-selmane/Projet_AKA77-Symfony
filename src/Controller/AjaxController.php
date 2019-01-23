@@ -22,7 +22,8 @@ class AjaxController extends AbstractController
 
         $table = $request->get("table");
         $tabAsso = [];
-
+                $tabImage = $galleryRepository->listeImage();
+                $tabAsso["tabImage"] = $tabImage;
         switch ($table) {
             case "gallery":
                 $id = $request->get("id");
@@ -31,8 +32,7 @@ class AjaxController extends AbstractController
                 $nbLike = $entite->getImgLike() + 1;
                 $entite->setImgLike($nbLike);
                 $entityManager->flush();
-                $tabImage = $galleryRepository->listeImage();
-                $tabAsso["tabImage"] = $tabImage;
+
                 break;
 
             case "article":
